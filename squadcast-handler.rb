@@ -5,7 +5,12 @@ require 'net/https'
 require 'uri'
 
 
+# For US Data Center
 url_hook = "https://api.squadcast.com/v1/incidents/sensu/"+ARGV[0]
+
+# For EU Data Center (Comment the above line and uncomment the below line)
+# url_hook = "https://api.eu.squadcast.com/v1/incidents/sensu/"+ARGV[0]
+
 
 event = JSON.parse(STDIN.read, :symbolize_names => true)
 
